@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Exchange Rates</title>
+</head>
+<body class="vh-100 d-flex align-items-center justify-content-center " style="font-family: 'Comic Neue', cursive; background: rgb(243, 240, 240);">
+<nav class="navbar navbar-dark w-100 p-3 position-absolute top-0 left-0 bg-black" >
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="bg-white p-1 rounded-2 shadow-sm d-flex align-items-center" style="width: 120px;">
+             <img src="https://cdn-icons-png.flaticon.com/512/2612/2612265.png" alt="Logo" width="30" class="me-1">
+             <small class="text-primary fw-bold" style="font-size: 10px; line-height: 1;">Currency<br>Converter</small>
+        </div>
+        <div class="text-warning h4 fw-bold mb-0">Currency-Converter</div>
+    </div>
+</nav>
+     <div class="container p-4 rounded-3 shadow-lg" 
+         style="background: linear-gradient(to bottom, #063831, #12937d); max-width: 700px; border: 1px solid #1a5a50;">
+        <div class="mb-4">
+            <h2 class="text-white mb-0 fs-2 fw-bold">Amount</h2>
+            <div class="border-bottom border-info border-3 d-flex align-items-center pb-1">
+                <input type="text" id="amount" placeholder="1 By Default" 
+                       class="bg-transparent border-0 text-white fs-4 fw-bold w-100" 
+                       style="outline: none; box-shadow: none;"
+                       oninput="convertCurrency()">                
+                     <i class="fa-solid fa-arrow-right-arrow-left text-info fw-500 "  
+                     style="cursor: pointer; user-select: none; font-size: 1.9rem; line-height: 1;"
+                      onclick="swapCurrencies()"></i>
+            </div>
+        </div>
+        <div class="mb-3">
+            <div class="input-group bg-black border border-light rounded-1 p-2">
+                <span class="input-group-text bg-transparent border-0">
+                    <img id="from-flag" src="https://flagsapi.com/AE/shiny/64.png" width="35">
+                </span>
+                <select id="from-currency" class="form-select bg-black text-white border-0 fs-5 shadow-none" ></select>
+            </div>
+        </div>
+        <div class="mb-4">
+            <div class="input-group bg-black border border-light rounded-1 p-2">
+                <span class="input-group-text bg-transparent border-0">
+                    <img id="to-flag" src="https://flagsapi.com/AE/shiny/64.png" width="35">
+                </span>
+                <select id="to-currency" class="form-select bg-black text-white border-0 fs-5 shadow-none" ></select>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <button class="btn btn-secondary w-100 py-2 fs-5 text-white"  
+                    onclick="convertCurrency()">Convert</button>
+        </div>
+
+        <div class="text-center mt-2">
+            <h1 class="text-white fw-bold display-5" id="final-result">1 AED = 1 AED</h1>
+        </div>
+    </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/Style.js"></script>
+</body>
+
+
+</html>
